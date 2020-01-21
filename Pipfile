@@ -1,0 +1,16 @@
+[requires]
+python_version = "3.7"
+
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[packages]
+ecs_deploy = {git = "https://github.com/fabfuel/ecs-deploy", ref = "1.10.0", editable = true}
+
+[dev-packages]
+pipenv-to-requirements = "*"
+
+[scripts]
+pin = "pipenv_to_requirements -fo requirements.txt"

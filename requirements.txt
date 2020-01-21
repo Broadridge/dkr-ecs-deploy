@@ -1,0 +1,28 @@
+################################################################################
+# This requirements file has been automatically generated from `Pipfile` with
+# `pipenv-to-requirements`
+#
+#
+# This has been done to maintain backward compatibility with tools and services
+# that do not support `Pipfile` yet.
+#
+# Do NOT edit it directly, use `pipenv install [-d]` to modify `Pipfile` and
+# `Pipfile.lock` and then regenerate `requirements*.txt`.
+################################################################################
+
+-e git+https://github.com/fabfuel/ecs-deploy@308926100b80e892f310f4016ba760726421812e#egg=ecs-deploy
+boto3==1.11.7
+botocore==1.14.7
+certifi==2019.11.28
+chardet==3.0.4
+click==6.7
+dictdiffer==0.8.0
+docutils==0.15.2
+future==0.18.2
+idna==2.8
+jmespath==0.9.4
+python-dateutil==2.8.1
+requests==2.22.0
+s3transfer==0.3.1
+six==1.14.0
+urllib3==1.25.7
