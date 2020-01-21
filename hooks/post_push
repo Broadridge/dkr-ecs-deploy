@@ -2,9 +2,8 @@
 
 echo "Post-Push hook running"
 
-# Ensure we also tag with the Cloud Custodian Version
-if [ "$DOCKER_TAG" == 'latest' ]; then
-	C7N_VERSION=$(grep 'c7n==' requirements.txt | awk '{split($0,ary,"=="); print ary[2]}')
-	docker tag "$IMAGE_NAME" "${DOCKER_REPO}:${C7N_VERSION}"
-	docker push "${DOCKER_REPO}:${C7N_VERSION}"
-fi
+GIT_REV=$(git rev-parse --short HEAD)
+# GIT_REV=${SOURCE_COMMIT:0:7}
+
+docker tag "$IMAGE_NAME" "${DOCKER_REPO}:${GIT_REV}"
+docker push "${DOCKER_REPO}:${GIT_REV}"
